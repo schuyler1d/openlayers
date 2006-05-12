@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>OpenLayers: Quick Tutorial</title>
+  <style type="text/css" media="screen,print">
+    @import "../common.css";
+  </style>
+</head>
+<body>
+<div id="wrap">
+  <div id="header"><h1>OpenLayers <span style="font-size:smaller;"> &#151; open geographic maps displayed in any web page</h1></span></div>
+  <div id="nav"> 
+  <a href="/">Home</a>
+  <a href="/QuickTutorial">20-second Tutorial</a>
+  <a href="/jobs">Jobs</a>
+  <a href="/EmailLists">Email Lists</a>
+  </div>
+  <div id="main">
+    <h2>Quick Tutorial</h2>
+    <p>Putting a map in a web page is easy.  Simply include the following in your page:
+    <pre>
+      &lt;iframe src="http://openlayers.org/viewer/"
+        width="200px" height="200px"
+        scrolling="no"
+        marginwidth="0" marginheight="0"
+        frameborder="0"&gt;
+      &lt;/iframe&gt;
+    </pre>
+    <p>You might want to adjust the <b>width</b> and <b>height</b> attributes, or you might want to put the whole thing inside of a <b>div</b> like this:
+    <pre>
+    &lt;div style="position:absolute; right:0px; top:150px; width:25%; height:200px;"&gt;
+      &lt;iframe src="http://openlayers.org/viewer/"
+        width="100%" height="100%"
+        scrolling="no"
+        marginwidth="0" marginheight="0"
+        frameborder="0"&gt;
+      &lt;/iframe&gt;
+    &lt;/div&gt;
+    </pre>
+
+    <p>Here are a few more examples:
+<table width=100% border=1>
+<tr width=100%>
+<td>
+<iframe
+      src="http://openlayers.org/viewer/"
+      width="600" height="400"
+      scrolling="no"
+      marginwidth="0" marginheight="0"
+      frameborder="0"></iframe>
+</td>
+<td width=50%>
+<pre>
+&lt;iframe
+      src="http://openlayers.org/viewer/"
+      width="600" height="400"
+      scrolling="no"
+      marginwidth="0" marginheight="0"
+      frameborder="0"&gt;
+&lt;/iframe&gt;
+</pre>
+</td>
+</tr>
+<tr width=100%>
+<td width=50%>
+<iframe
+      src="http://openlayers.org/viewer/"
+      width="300" height="200"
+      scrolling="no"
+      marginwidth="0" marginheight="0"
+      frameborder="0"></iframe>
+</td>
+<td width=50%>
+<pre>
+&lt;iframe
+      src="http://openlayers.org/viewer/"
+      width="300" height="200"
+      scrolling="no"
+      marginwidth="0" marginheight="0"
+      frameborder="0"&gt;
+&lt;/iframe&gt;
+</pre>
+</td>
+</tr>
+</table>
+
+  </div>
+  <div id="sidebar"></div>
+  <div id="footer"></div>
+</div>
+  </body>
+</html>

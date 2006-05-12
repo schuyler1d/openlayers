@@ -1,0 +1,3 @@
+the openlayers directory in this directory is a separate checkout from
+htdocs.  You must go INSIDE the openlayers directory to update it.
+updating ~/openlayers.org/htdocs only gets the home page material.
