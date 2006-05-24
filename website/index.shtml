@@ -1,0 +1,78 @@
+<!--#set var="title" value="Home" -->
+<!--#include virtual="/include/head.html" -->
+  <div id="main">
+    <div id="map">
+      <iframe src="example.html"
+        width="548px" height="273px"
+        scrolling="no"
+        marginwidth="0" marginheight="0"
+        frameborder="0"
+        style="border: 1px solid darkgray">
+      </iframe>
+      <div align="center"><b>Put an open map widget in any web page!</b></div>
+      <div align="center"><b>Double-click to zoom in, and drag to pan.</b></div>
+    </div>
+    <h3>About...</h3>
+    <p>OpenLayers makes it easy to put a dynamic map in any web page.  It can
+display map tiles and markers loaded from any source.    <a
+href="http://www.metacarta.com/">MetaCarta</a> developed the initial version of
+OpenLayers and gave it to the public to further the use of geographic
+information of all kinds.  OpenLayers is 
+completely free, Open Source JavaScript, released under the BSD License.</p>
+
+    <h3>Put a map in your page.</h3>
+    <p>We've released a Map Viewer Service that lets you put a map in your page easily.  Just put this HTML in your page:</p>
+    <pre>
+      &lt;iframe src="http://openlayers.org/viewer/"
+        width="400px" height="200px"
+        scrolling="no"
+        marginwidth="0" marginheight="0"
+        frameborder="0"&gt;
+      &lt;/iframe&gt;</pre>
+
+<p>Read more examples in the <a href="QuickTutorial">20-second tutorial</a>.  The visual appearance of the MapViewer is not yet stable.  If you like it, please join the <a href="EmailLists">users' email list</a> and tell us about your use.</p>
+
+    <h3>For Developers!</h3>
+<p>OpenLayers is a pure JavaScript library for displaying map data in any web
+browser, with no server-side dependencies. OpenLayers implements a
+(still-developing) <a href="//trac.openlayers.org/wiki/SimpleAPI">JavaScript
+API</a> for building rich web-based geographic applications, similar to the
+Google Maps and MSN Virtual Earth APIs, with one important difference --
+OpenLayers is Free Software, developed for and by the Open Source software
+community.</p>
+
+<p>Furthermore, OpenLayers implements industry-standard methods for geographic
+data access, such as the OpenGIS Consortium's Web Mapping Service (WMS) and Web
+Feature Service (WFS) protocols. Under the hood, OpenLayers is written in
+object-oriented JavaScript, using <a
+href="//prototype.conio.net/">Prototype.js</a> and components from the <a
+href="//openrico.org/">Rico<a> library. The OpenLayers code base already has
+hundreds of unit tests.</p>
+
+<p>As a framework, OpenLayers is intended to separate map <i>tools</i> from map
+<i>data</i> so that all the tools can operate on all the data sources.  This
+separation breaks the proprietary silos that earlier GIS revolutions have
+taught civilization to avoid.  The mapping revolution on the public Web should
+benefit from the experience of history.</p>
+
+    <h3>Getting the Code.</h3>
+
+<p>At the moment, the code is only available from our <a
+href="//trac.openlayers.org/wiki/HowToDownload">Subversion repository</a>.
+Please download OpenLayers from SVN and try out the files in the
+<code>examples/</code> directory -- and then please join the mailing list and
+tell us what you like, what you don't like, and what you'd like to see
+added!</p>
+
+<p>If you don't have Subversion or don't want to download the code, you can
+still try some <a href="/dev/examples/">live examples</a> on
+openlayers.org. If you're familiar with JavaScript, try viewing the source
+of the examples to get an idea how the OpenLayers library is used.</p>
+
+<p>OpenLayers is still undergoing rapid development, so expect a lot to change
+in the next few weeks and months. We hope to have a proper code release in time
+for Where 2.0 in mid-June 2006.</p>
+
+
+  </div>
+<!--#include virtual="/include/foot.html" -->

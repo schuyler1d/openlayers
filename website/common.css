@@ -13,12 +13,12 @@ div#wrap {
 	width: 100%;
 }
 #header h1 {
-	font-family: sans-serif;
-	font-size: 30px;
 	background: #000099;
 	color: #FFFF00;
 	padding: 20px 50px 20px 75px;
 	margin: 0px 0 0 0;
+	font-family: sans-serif;
+        font-size: 30px;
 }
 #nav {
 	padding:5px;
@@ -69,15 +69,24 @@ div#wrap {
 }
 #main p {
 	font-family: sans-serif;
-	font-size: 16px;
-	margin: 0 0 25px 0;
-	padding:0 10px 0px 0;
+	margin: 0 0 25px 0px;
+	padding: 0 20px 0px 0px;
+        text-align: justify;
 }
 #main li {
 	font-family: sans-serif;
-	font-size: 16px;
 	margin: 5px 0 0 0;
 	padding:0 10px 0px 0;
+}
+#main * td {
+    padding: 1em;
+    font-size: .8em;
+}
+#main * td pre {
+    padding: .5em;
+    font-size: .8em;
+    background-color: lightgray;
+    border: 1px dashed gray;
 }
 #sidebar {
 	display: none;
@@ -88,12 +97,9 @@ div#wrap {
 	font-family:sans-serif;
 	font-size: 16px;
         float: right;
-        width: 450px;
-	height: 400px;
-        margin-left: 20px;
-	margin-right: 5px;
-	margin-bottom: 100px;
-	display: inline;
+        width: 550px;
+	height: 275px;
+	padding: 35px 10px 35px 35px;
 }
 #sidebar h3, #sidebar p {
 	padding:0 10px;

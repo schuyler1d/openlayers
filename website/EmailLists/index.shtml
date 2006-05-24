@@ -1,21 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <title>OpenLayers: Email Lists</title>
-  <style type="text/css" media="screen,print">
-    @import "../common.css";
-  </style>
-</head>
-<body>
-<div id="wrap">
-  <div id="header"><h1>OpenLayers <span style="font-size:smaller;"> &#151; open geographic maps displayed in any web page</h1></span></div>
-  <div id="nav"> 
-  <a href="/">Home</a>
-  <a href="/QuickTutorial">20-second Tutorial</a>
-  <a href="/jobs">Jobs</a>
-  <a href="/EmailLists">Email Lists</a>
-  <a href="//trac.openlayers.org/">Wiki</a>
-  </div>
+<!--#set var="title" value="Mailing Lists" -->
+<!--#include virtual="/include/head.html" -->
   <div id="main">
    <center><h2>Please join either or both of these mailing lists for OpenLayers users and developers.</h2></center>
    <div style="position:absolute; left:0px; width:50%; height:2000;">
@@ -41,3 +25,4 @@
 </div>
   </body>
 </html>
+<!--#include virtual="/include/foot.html" -->
