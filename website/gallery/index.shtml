@@ -1,0 +1,31 @@
+<!--#set var="title" value="Home" -->
+<!--#include virtual="/include/head.html" -->
+  <div id="main">
+  <h3>OpenLayers Gallery</h3>
+  <p>OpenLayers is used as the frontend for a variety of data providers, from
+     commercial data sources to local area maps for a specific town. This
+     gallery shows some of the uses of OpenLayers that we've found. If you've
+     got an OpenLayers powered site you want added to the gallery, please
+     join the 
+     <a href="http://mailman-viper.python-hosting.com/listinfo/users">users email list</a>
+     and let us know!</p>
+  <table width="95%">
+    <tr valign='top'>
+      <td width="60%"><span style='font-weight:bold; font-size:1.2em;'>MIT WMS Server</span><br/>
+      Display the MIT IMS server data in OpenLayers
+      </td>
+      <td>
+        <a href="mit.html"><img src="../images/mit.png" /></a>
+      </td>
+   </tr>
+   <tr valign='top'>
+      <td width="60%"><span style='font-weight:bold; font-size:1.2em;'>Iowa State WMS Server</span><br/>
+      Display 5 different layers: Landcover 2002, 1:24000 DRGs, 1832-1859 Vegetation/Landcover, 1930s orthos, and 2005 orthos
+      </td>
+      <td>
+        <a href="iowa.html"><img src="../images/iowa.png" /></a>
+      </td>
+   </tr>
+ </table>  
+</div>
+<!--#include virtual="/include/foot.html" -->
