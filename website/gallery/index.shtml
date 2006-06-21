@@ -47,7 +47,7 @@
       One of the most impressive aspects of OpenLayers is its ability to interact with the data from the other data providers. The Google-Yahoo-Microsoft Demo shows how OpenLayers can be used as the frontend to the proprietary data providers as well as public data sources.
       </td>
       <td>
-        <a href="/gym.html"><img src="../images/gym.png" /></a>
+        <a href="./gym.html"><img src="../images/gym.png" /></a>
       </td>
    </tr>
     <tr valign='top'>
