@@ -66,6 +66,7 @@
         <a href="iowa.html"><img src="../images/iowa.png" /></a>
       </td>
    </tr>
- </table>  
+ </table>
+ <p>For simpler examples of what the OpenLayers codebase can do, check out the <a href="/dev/examples">examples</a> included with the distribution. These pages show how to display and add markers/popups, how to change projections, and more.</p>
 </div>
 <!--#include virtual="/include/foot.html" -->
