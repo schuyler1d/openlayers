@@ -11,6 +11,30 @@
      and let us know!</p>
   <table width="95%">
     <tr valign='top'>
+      <td width="60%"><span style='font-weight:bold; font-size:1.2em;'>Mumbai Free Map</span><br/>
+      The Mumbai Free Map is an attempt to create an open-data base mapping initiative in Mumbai, India. It is part of the Free Map System, and contains raster and vector data to an incredibly detailed level. OpenLayers replaced MapBuilder as the primary mapping interface for the project in May of 2005.
+      </td>
+      <td>
+        <a href="http://mumbai.freemap.in/"><img src="../images/mumbai.png" /></a>
+      </td>
+   </tr>
+    <tr valign='top'>
+      <td width="60%"><span style='font-weight:bold; font-size:1.2em;'>Boston Free Map</span><br/>
+      The Boston Free Map uses data from MassGIS inside of an OpenLayers instance. It is designed to be used by applications in Massachusetts which are dedicated to free/open data, such as the <a href="http://boston.openguides.org/">Open Guide to Boston</a>.
+      </td>
+      <td>
+        <a href="http://boston.freemap.in/"><img src="../images/boston.png" /></a>
+      </td>
+   </tr>
+    <tr valign='top'>
+      <td width="60%"><span style='font-weight:bold; font-size:1.2em;'>Google-Yahoo-Microsoft</span><br/>
+      One of the most impressive aspects of OpenLayers is its ability to interact with the data from the other data providers. The Google-Yahoo-Microsoft Demo shows how OpenLayers can be used as the frontend to the proprietary data providers as well as public data sources.
+      </td>
+      <td>
+        <a href="/gym.html"><img src="../images/gym.png" /></a>
+      </td>
+   </tr>
+    <tr valign='top'>
       <td width="60%"><span style='font-weight:bold; font-size:1.2em;'>MIT WMS Server</span><br/>
       Display the MIT IMS server data in OpenLayers
       </td>
