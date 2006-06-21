@@ -11,6 +11,14 @@
      and let us know!</p>
   <table width="95%">
     <tr valign='top'>
+      <td width="60%"><span style='font-weight:bold; font-size:1.2em;'>Gutenkarte</span><br/>
+        Gutenkarte is a geographic text browser, intended to help readers explore the spatial component of classic works of literature. It is built atop MetaCarta's GeoParser API, and uses OpenLayers to display locations on a general map and on the 'browse' pages.
+      </td>
+      <td>
+        <a href="http://gutenkarte.org/"><img src="../images/gutenkarte.png" /></a>
+      </td>
+   </tr>
+    <tr valign='top'>
       <td width="60%"><span style='font-weight:bold; font-size:1.2em;'>Mumbai Free Map</span><br/>
       The Mumbai Free Map is an attempt to create an open-data base mapping initiative in Mumbai, India. It is part of the Free Map System, and contains raster and vector data to an incredibly detailed level. OpenLayers replaced MapBuilder as the primary mapping interface for the project in May of 2005.
       </td>
@@ -24,6 +32,14 @@
       </td>
       <td>
         <a href="http://boston.freemap.in/"><img src="../images/boston.png" /></a>
+      </td>
+   </tr>
+    <tr valign='top'>
+      <td width="60%"><span style='font-weight:bold; font-size:1.2em;'>GSMLoc.org</span><br/>
+      GSMLoc.org is a cell stumbling site. It uses OpenLayers to power the maps which are the basis of displaying information to users on the site.
+      </td>
+      <td>
+        <a href="http://gsmloc.org/"><img src="../images/gsmloc.png" /></a>
       </td>
    </tr>
     <tr valign='top'>
