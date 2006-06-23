@@ -1,58 +1,64 @@
 #!/usr/bin/env python
 
-"""This is a blind proxy that we use to get around browser
-restrictions that prevent the Javascript from loading pages not on the
-same server as the Javascript.  This has several problems: it's less
-efficient, it might break some sites, and it's a security risk because
-people can use this proxy to browse the web and possibly do bad stuff
-with it.  If you can get your code signed (see:
-http://trac.openlayers.org/wiki/HowToSignJavascript), then you should
-modify Parameters.js so that this isn't used.  Otherwise, you're stuck
-with it.  It only loads pages via http and https, but it can load any
-content type. XML and HTML are both currently used by Openlayers."""
+"""This is a blind proxy that we use to get around browser restrictions that
+prevent the Javascript from loading pages not on the same server as the
+Javascript. It will only load HTTP and HTTPS requests, and it will check the
+content to see if it's XML-like or tab-separated text.  If the content is
+neither, the proxy will increment a semaphore in memcached keyed to that IP
+address. If the IP in question exceeds its daily quota of bad requests, it will
+be shut off for 24 hours from its first request."""
+
+"""The following Apache 2 config is used to make this work:
+    <Directory /www/openlayers/htdocs/proxy>
+         SetHandler mod_python
+         PythonHandler saferproxy
+         PythonDebug On
+    </Directory>
+"""
 
 from mod_python import apache, util
-import urllib, time, cgi, re
+import urllib, time, cgi, re, warnings
 import memcache
 
-is_xml_like         = re.compile( r'^\s*<?xml[^>]*?>', re.DOTALL )
-is_tab_separated    = re.compile( r'^(?:(?:[^\t\n]+\t)+[^\t\n]*\n?)$)+', 
+is_xml_like         = re.compile( r'^\s*<\?xml[^>]*\?>', re.DOTALL )
+is_tab_separated    = re.compile( r'^(?:(?:[^\t\n]+\t)+[^\t\n]*\n?)+\s*$', 
                                     re.DOTALL )
 
 class Session (object):
     max_bad_requests = 6
     timeout = 86400
 
-    def __init__ ():
+    def __init__ (self, req):
         self.cache = memcache.Client(['127.0.0.1:11211'], debug=0)
-        self.ip    = apache.mp_conn.remote_ip
+        self.ip    = req.connection.remote_ip
 
-    def made_bad_request ():
-        self.cache.incr( self.ip )
+    def made_bad_request (self):
+        try:
+            self.cache.incr( self.ip )
+        except ValueError:
+            self.validate(1)
 
-    def made_good_request ():
-        self.cache.decr( self.ip )
+    def made_good_request (self):
+        try:
+            self.cache.decr( self.ip )
+        except ValueError:
+            pass
 
-    def validate ():
+    def validate (self, initial = 0):
         count = self.cache.get( self.ip )
         if count is None:
-            self.cache.set( self.ip, "0", time.time() + self.timeout )
+            self.cache.set( self.ip, str(initial), time.time() + self.timeout )
             return True
         else:
-            return count < max_bad_requests
-
-def authenhandler (req):
-    client = Session()
-    if client.validate():
-        return apache.OK
-    else:
-        return apache.HTTP_SERVICE_UNAVAILABLE
+            return int(count) < self.max_bad_requests
 
 def handler (req):
-    fs = util.FieldStorage(req)
-    url = fs.getvalue('url', "http://openlayers.org")
-    client = Session()
+    client = Session(req)
+    if not client.validate():
+        return apache.HTTP_SERVICE_UNAVAILABLE
 
+    fs = util.FieldStorage(req)
+    url = fs["url"]
     if url.startswith("http://") or url.startswith("https://"):
         proxy = urllib.urlopen(url)
         content = proxy.read()
