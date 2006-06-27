@@ -14,6 +14,11 @@
         and drag to zoom to a particular region.
       </div>
     </div>
+    <h3>Get OpenLayers Now</h3>
+    <p>
+    Latest stable release: <a href="/download/OpenLayers-1.0.tar.gz">OpenLayers-1.0.tar.gz</a> | <a href="/api/OpenLayers.js">Link to the hosted version</a>
+    </p>
+
     <h3>About...</h3>
     <p>OpenLayers makes it easy to put a dynamic map in any web page.  It can
 display map tiles and markers loaded from any source.    <a

@@ -28,9 +28,9 @@ class Session (object):
     max_bad_requests = 6
     timeout = 86400
 
-    def __init__ (self, req):
+    def __init__ (self, ip):
         self.cache = memcache.Client(['127.0.0.1:11211'], debug=0)
-        self.ip    = req.connection.remote_ip
+        self.ip    = ip
 
     def made_bad_request (self):
         try:
@@ -53,7 +53,7 @@ class Session (object):
             return int(count) < self.max_bad_requests
 
 def handler (req):
-    client = Session(req)
+    client = Session(req.connection.remote_ip)
     if not client.validate():
         return apache.HTTP_SERVICE_UNAVAILABLE
 
