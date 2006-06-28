@@ -13,6 +13,10 @@
     addition to using the map controls in the upper left corner of each map,
     you can also drag and/or double-click on the map itself to pan and
     zoom.</p>
+    <p>There is <a href="http://trac.openlayers.org/wiki/MapViewerService">
+    documentation for the URL params</a> of the Map Viewer Service, to allow 
+    you to set the controls, the center of the map, or data to load.
+    </p>
 <table width=100% border=1>
 <tr width=100%>
 <td>
