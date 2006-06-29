@@ -19,8 +19,16 @@
       </td>
    </tr>
     <tr valign='top'>
+      <td width="60%"><span style='font-weight:bold; font-size:1.2em;'>World Free Map</span><br />
+        The World Free Map is a queryable version of the CIA Factbook. Clicking on a country will show information about it, from the population to the number of cell phones.
+      </td>
+      <td>
+        <a href="http://world.freemap.in/"><img src="../images/world.png" /></a>
+      </td>
+   </tr>
+    <tr valign='top'>
       <td width="60%"><span style='font-weight:bold; font-size:1.2em;'>Mumbai Free Map</span><br/>
-      The Mumbai Free Map is an attempt to create an open-data base mapping initiative in Mumbai, India. It is part of the Free Map System, and contains raster and vector data to an incredibly detailed level. OpenLayers replaced MapBuilder as the primary mapping interface for the project in May of 2005.
+      The Mumbai Free Map is an attempt to create an open-data base mapping initiative in Mumbai, India. It is part of the Free Map System, and contains raster and vector data to an incredibly detailed level. OpenLayers replaced MapBuilder as the primary mapping interface for the project in May of 2006.
       </td>
       <td>
         <a href="http://mumbai.freemap.in/"><img src="../images/mumbai.png" /></a>
