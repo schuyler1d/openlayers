@@ -1,13 +1,8 @@
 <!--#set var="title" value="Home" -->
 <!--#include virtual="/include/head.html" -->
   <div id="main">
-    <div id="map">
-      <iframe src="example.html"
-        width="549px" height="274px"
-        scrolling="no"
-        marginwidth="0" marginheight="0"
-        frameborder="0">
-      </iframe>
+    <div id="mapFrame">
+      <div id="map"></div>
       <div align="center"><b>Put an open map widget in any web page!</b></div>
       <div align="center">
         Double-click to zoom in, and drag to pan. Hold down the shift key
@@ -79,9 +74,36 @@ openlayers.org. If you're familiar with JavaScript, try viewing the source
 of the examples to get an idea how the OpenLayers library is used.</p>
 
 <p>OpenLayers is still undergoing rapid development, so expect a lot to change
-in the next few weeks and months. We hope to have a proper code release in time
-for Where 2.0 in mid-June 2006.</p>
-
+in the next few weeks and months. We need your support! Please check the <a
+href="//trac.openlayers.org">wiki</a> for the very latest updates and
+documentation, and thank you for taking an interest.</p> 
 
   </div>
+  <script type="text/javascript" src="/api/OpenLayers.js"></script>
+  <script type="text/javascript">
+        <!--
+            var map = new OpenLayers.Map('map', {maxResolution:null});
+
+            var ol_wms = new OpenLayers.Layer.WMS( "World Map", 
+                "http://labs.metacarta.com/wms/vmap0?",
+                 {layers: 'basic'} );
+
+            var jpl_wms = new OpenLayers.Layer.WMS( "Satellite",
+                "http://wms.jpl.nasa.gov/wms.cgi", 
+                {layers: "modis,global_mosaic"});
+
+            var dm_wms = new OpenLayers.Layer.WMS( "Canada",
+                "http://www2.dmsolutions.ca/cgi-bin/mswms_gmap",
+                {layers: "bathymetry,land_fn,park,drain_fn,drainage," +
+                         "prov_bound,fedlimit,rail,road,popplace",
+                 transparent: "true", format: "image/png" });
+
+            jpl_wms.setVisibility(false);
+            dm_wms.setVisibility(false);
+
+            map.addLayers([ol_wms, jpl_wms, dm_wms]);
+            map.addControl(new OpenLayers.Control.LayerSwitcher());
+            map.zoomToFullExtent();
+        // -->
+    </script>
 <!--#include virtual="/include/foot.html" -->
