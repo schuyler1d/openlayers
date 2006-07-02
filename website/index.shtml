@@ -59,14 +59,22 @@ separation breaks the proprietary silos that earlier GIS revolutions have
 taught civilization to avoid.  The mapping revolution on the public Web should
 benefit from the experience of history.</p>
 
-    <h3>Getting the Code.</h3>
+    <h3>Getting the Code</h3>
 
-<p>At the moment, the code is only available from our <a
-href="//trac.openlayers.org/wiki/HowToDownload">Subversion repository</a>.
-Please download OpenLayers from SVN and try out the files in the
-<code>examples/</code> directory -- and then please join the mailing list and
-tell us what you like, what you don't like, and what you'd like to see
-added!</p>
+<p>Releases are made available on the <a href="/download/">downloads</a> page.
+Additionally, if you wish to use OpenLayers in a web application, you can 
+include 
+  <tt>
+    <a href="http://www.openlayers.org/api/OpenLayers.js">http://www.openlayers.org/api/OpenLayers.js</a>
+   </tt> in your page, to always get the latest release.</p>
+
+<p> The code is also available in our
+<a href="//trac.openlayers.org/wiki/HowToDownload">Subversion repository</a>.
+Using Subversion, you can keep up to the absolute bleeding edge of the code.
+If you wish to report a bug in the API, and you are able to use Subversion, 
+please see if the bug has been fixed in Subversion first: OpenLayers is
+under rapid development, so things change quickly.
+</p>
 
 <p>If you don't have Subversion or don't want to download the code, you can
 still try some <a href="/dev/examples/">live examples</a> on
@@ -79,26 +87,23 @@ href="//trac.openlayers.org">wiki</a> for the very latest updates and
 documentation, and thank you for taking an interest.</p> 
 
   </div>
-  <script type="text/javascript" src="/api/OpenLayers.js"></script>
+  <script type="text/javascript" src="/dev/lib/OpenLayers.js"></script>
   <script type="text/javascript">
         <!--
-            var map = new OpenLayers.Map('map', {maxResolution:null});
+            var map = new OpenLayers.Map('map');
 
             var ol_wms = new OpenLayers.Layer.WMS( "World Map", 
                 "http://labs.metacarta.com/wms/vmap0?",
                  {layers: 'basic'} );
 
-            var jpl_wms = new OpenLayers.Layer.WMS( "Satellite",
-                "http://wms.jpl.nasa.gov/wms.cgi", 
-                {layers: "modis,global_mosaic"});
-
+            var jpl_wms = new OpenLayers.Layer.KaMap( "Satellite",
+                    "/world/index.php", {g: "satellite", map: "world"});
             var dm_wms = new OpenLayers.Layer.WMS( "Canada",
                 "http://www2.dmsolutions.ca/cgi-bin/mswms_gmap",
                 {layers: "bathymetry,land_fn,park,drain_fn,drainage," +
                          "prov_bound,fedlimit,rail,road,popplace",
                  transparent: "true", format: "image/png" });
 
-            jpl_wms.setVisibility(false);
             dm_wms.setVisibility(false);
 
             map.addLayers([ol_wms, jpl_wms, dm_wms]);
