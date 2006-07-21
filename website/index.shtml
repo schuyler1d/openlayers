@@ -37,7 +37,7 @@ completely free, Open Source JavaScript, released under the BSD License.</p>
     <h3>For Developers!</h3>
 <p>OpenLayers is a pure JavaScript library for displaying map data in most
 modern web browsers, with no server-side dependencies. OpenLayers implements a
-(still-developing) <a href="//trac.openlayers.org/wiki/SimpleAPI">JavaScript
+(still-developing) <a href="//trac.openlayers.org/wiki/Documentation">JavaScript
 API</a> for building rich web-based geographic applications, similar to the
 Google Maps and MSN Virtual Earth APIs, with one important difference --
 OpenLayers is Free Software, developed for and by the Open Source software
