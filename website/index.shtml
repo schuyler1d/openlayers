@@ -13,6 +13,7 @@
     <p>
     Latest stable release: <a href="/download/OpenLayers-1.0.tar.gz">OpenLayers-1.0.tar.gz</a> | <a href="/api/OpenLayers.js">Link to the hosted version</a> | <a href="/gallery/">See Screenshots</a>
     </p>
+    <p>New Development Release! To help test 2.0-RC1, you can use <tt>http://openlayers.org/api/2.0-rc1/OpenLayers.js</tt> as a script tag in your pages. Report any bugs or problems in Trac, or to our mailing lists.</p>
 
     <h3>About...</h3>
     <p>OpenLayers makes it easy to put a dynamic map in any web page.  It can
@@ -87,7 +88,7 @@ href="//trac.openlayers.org">wiki</a> for the very latest updates and
 documentation, and thank you for taking an interest.</p> 
 
   </div>
-  <script type="text/javascript" src="/dev/lib/OpenLayers.js"></script>
+  <script type="text/javascript" src="/api/2.0-rc1/OpenLayers.js"></script>
   <script type="text/javascript">
         <!--
             var map = new OpenLayers.Map('map');
