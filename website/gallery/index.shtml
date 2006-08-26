@@ -51,11 +51,11 @@
       </td>
    </tr>
     <tr valign='top'>
-      <td width="60%"><span style='font-weight:bold; font-size:1.2em;'>Google-Yahoo-Microsoft</span><br/>
-      One of the most impressive aspects of OpenLayers is its ability to interact with the data from the other data providers. The Google-Yahoo-Microsoft Demo shows how OpenLayers can be used as the frontend to the proprietary data providers as well as public data sources.
+      <td width="60%"><span style='font-weight:bold; font-size:1.2em;'>Multiple Providers</span><br/>
+      One of the most impressive aspects of OpenLayers is its ability to interact with the data from the other data providers. The Multiple Provider Demo shows how OpenLayers can be used as the frontend to the proprietary data providers as well as public data sources.
       </td>
       <td>
-        <a href="./gym.html"><img src="../images/gym.png" /></a>
+        <a href="./multiple.html"><img src="../images/gym.png" /></a>
       </td>
    </tr>
     <tr valign='top'>
