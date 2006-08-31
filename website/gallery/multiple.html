@@ -11,6 +11,7 @@
   <p>With the click of a button, OpenLayers can change between a half dozen providers.</p> 
   <div style="width:100%; height:80%" id="map"></div>
   <script defer="defer" type="text/javascript">
+    OpenLayers.ProxyHost="/proxy/?url=";
     var map = new OpenLayers.Map('map', {controls: [new OpenLayers.Control.PanZoomBar()]});
     map.addControl(new OpenLayers.Control.MouseToolbar());
     var ls = new OpenLayers.Control.LayerSwitcher();
@@ -20,13 +21,22 @@
             map.addLayer(mmlayer);
     var wms = new OpenLayers.Layer.WMS( "OpenLayers WMS", 
         "http://labs.metacarta.com/wms/vmap0", {layers: 'basic'} );
+    var	 wmss = new OpenLayers.Layer.WMS( "OpenPlans WMS",
+				"http://sigma.openplans.org:3128/geoserver/wms",
+							{layers: "topp:poly_landmarks,topp:water_polygon,topp:water_shorelines,topp:roads,topp:major_roads,topp:states,topp:countries,topp:gnis_pop",
+										 transparent: "false", format: "image/png", styles: "freemap_open_space,freemap_water,water_line,freemap_roads,freemap_major_roads,states_ol_sat,world_countries,gnis_pop_ol"});
+    var jpl_wms = new OpenLayers.Layer.KaMap( "Satellite (NASA)",
+         "/world/index.php", {g: "satellite", map: "world"});
+ 
     var google = new OpenLayers.Layer.Google("Google");
     var googles = new OpenLayers.Layer.Google("Google Satellite", { 'type': G_SATELLITE_MAP });
     var googleh = new OpenLayers.Layer.Google("Google Hybrid", { 'type': G_HYBRID_MAP });
     var ve = new OpenLayers.Layer.VirtualEarth("VirtualEarth", {'minZoomLevel': 0});
     var yahoo = new OpenLayers.Layer.Yahoo("Yahoo");
     var markers = new OpenLayers.Layer.Markers("Markers");
-    map.addLayers([wms,google,googles, googleh, ve,yahoo,markers]);
+    markers.setVisibility(false);
+    var georss = new OpenLayers.Layer.GeoRSS("Earthquakes (GeoRSS)", "http://earthquake.usgs.gov/eqcenter/recenteqsww/catalogs/eqs7day-M2.5.xml");
+    map.addLayers([wms,wmss,jpl_wms, google,googles, googleh, ve,yahoo,markers,georss]);
     map.setCenter(new OpenLayers.LonLat(-71,42), 6);
     map.events.register("click", map, function(e) {
       markers.addMarker(new OpenLayers.Marker(this.getLonLatFromPixel(e.xy)));
