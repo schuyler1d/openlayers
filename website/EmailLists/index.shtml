@@ -1,12 +1,13 @@
 <!--#set var="title" value="Mailing Lists" -->
 <!--#include virtual="/include/head.html" -->
   <div id="main">
-   <center><h2>Please join either or both of these mailing lists for OpenLayers users and developers.</h2></center>
+  <h2>Mailing Lists</h2>
+   <p>Please join either or both of these mailing lists for OpenLayers users and developers.</p>
 <p>   
-   <a href="http://mailman-viper.python-hosting.com/listinfo/users">Users List</a> - for users of the OpenLayers code, or others who are interested in seeing OpenLayers code in use.
+   <a href="/mailman/listinfo/users">Users List</a> - for users of the OpenLayers code, or others who are interested in seeing OpenLayers code in use.
    </p>
 <p>   
-  <a href="http://mailman-viper.python-hosting.com/listinfo/dev">Development List</a> - for developers of the OpenLayers code, or others who are interested in the development of OpenLayers.
+  <a href="/mailman/listinfo/dev">Development List</a> - for developers of the OpenLayers code, or others who are interested in the development of OpenLayers.
   </p>
   </div>
   <div id="sidebar"></div>
