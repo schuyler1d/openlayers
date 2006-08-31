@@ -1,5 +1,5 @@
-OpenLayers: Individual Contributor License Agreement ("Agreement")
-v1.0 http://www.openlayers.org/icla.txt
+OpenLayers Individual Contributor License Agreement ("Agreement") v1.0
+http://www.openlayers.org/icla.txt
 
 Thank you for your interest in the OpenLayers project, which is
 presently maintained by MetaCarta, Inc. (the "Maintainer").  In order
@@ -9,13 +9,23 @@ Contributor License Agreement ("CLA") on file that has been signed by
 each Contributor, indicating agreement to the license terms below.
 This license is for your protection as a Contributor as well as the
 protection of the OpenLayers project and its users; it does not change
-your rights to use your own Contributions for any other purpose.  If
-you have not already done so, please complete and send an original
-signed Agreement to OpenLayers care of MetaCarta, 350 Massachusetts
-Avenue, Cambridge, MA 02139, U.S.A., or email an image of a signed
-agreement to openlayers_at_metacarta.com.  Please read this document
-carefully before signing and keep a copy for your records.
+your rights to use your own Contributions for any other purpose.  
 
+If you have not already done so, please complete and send an original
+signed Agreement to:
+
+   OpenLayers care of MetaCarta
+   350 Massachusetts Avenue
+   Suite #450
+   Cambridge, MA 02139
+   U.S.A.
+
+The signed Agreement may also be sent by facsimile to the Maintainer at:
+
+   Attn: OpenLayers   617-663-6382
+
+Please read this document carefully before signing and keep a copy for
+your records.
 
   Full name: ____________________________  E-Mail:    ___________________
 
@@ -108,8 +118,9 @@ Your Contributions.
    applicable law or agreed to in writing, You provide Your
    Contributions on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS
    OF ANY KIND, either express or implied, including, without
-   limitation, any warranties or conditions of TITLE, NON-
-   INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+   limitation, any warranties or conditions of TITLE,
+   NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR
+   PURPOSE.
 
 7. Should You wish to submit work that is not Your original creation,
    You may submit it to the Maintainer separately from any
