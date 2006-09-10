@@ -1,0 +1,16 @@
+    markers = new OpenLayers.Layer.Markers("Markers");
+    map.addLayer(markers);
+
+    marker = new OpenLayers.Marker( new OpenLayers.LonLat(5, 40) );
+    markers.addMarker(marker);
+
+
+    popup = new OpenLayers.Popup.Anchored("Example",
+                                 new OpenLayers.LonLat(5,40),
+                                 new OpenLayers.Size(200,200),
+                                 "Welcome to Barcelona");
+    popup.hide();
+    map.addPopup(popup);
+
+    marker.events.register( "click", marker, function (e) { popup.toggle() } );
+
