@@ -1,11 +1,24 @@
-    markers = new OpenLayers.Layer.Markers("Markers");
+<html>
+<head>
+  <title>OpenLayers Example</title>
+  <script src="http://openlayers.org/api/2/OpenLayers.js"></script>
+</head>
+<body>
+  <div style="width:100%; height:100%" id="map"></div>
+  <script defer="defer" type="text/javascript">
+    var map = new OpenLayers.Map('map');
+    var wms = new OpenLayers.Layer.WMS( "OpenLayers WMS", 
+        "http://labs.metacarta.com/wms/vmap0", {layers: 'basic'} );
+    map.addLayer(wms);
+
+    var markers = new OpenLayers.Layer.Markers("Markers");
     map.addLayer(markers);
 
-    marker = new OpenLayers.Marker( new OpenLayers.LonLat(5, 40) );
+    var marker = new OpenLayers.Marker( new OpenLayers.LonLat(5, 40) );
     markers.addMarker(marker);
 
 
-    popup = new OpenLayers.Popup.Anchored("Example",
+    var popup = new OpenLayers.Popup.Anchored("Example",
                                  new OpenLayers.LonLat(5,40),
                                  new OpenLayers.Size(200,200),
                                  "Welcome to Barcelona");
@@ -13,4 +26,6 @@
     map.addPopup(popup);
 
     marker.events.register( "click", marker, function (e) { popup.toggle() } );
-
+  </script>
+</body>
+</html>
