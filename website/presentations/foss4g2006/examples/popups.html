@@ -26,6 +26,8 @@
     map.addPopup(popup);
 
     marker.events.register( "click", marker, function (e) { popup.toggle() } );
+    
+    map.zoomToMaxExtent();
   </script>
 </body>
 </html>
