@@ -3,6 +3,7 @@
   <script src="http://openlayers.org/api/2/OpenLayers.js"></script>
   <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAjpkAC9ePGem0lIq5XcMiuhR9x1oSmy2l6lpQn4Fwjw8XucNdcRTlgTn6soDriQjjLeXkEx6fjn1stg"
         type="text/javascript"></script>
+<div id="main">
 <h1>Getting Started with OpenLayers</h1>
 
 <p>OpenLayers is a pure JavaScript library for displaying map data in most
@@ -174,6 +175,5 @@ new layer type to the map:</p>
 
 <p>The default Google Map type is the road map. G_SATELLITE_MAP is also
 supported, in addition to G_HYBRID_MAP.</p>
-</body>
-</html>
+</div>
 <!--#include virtual="/include/foot.html" -->
