@@ -13,7 +13,7 @@
     <p>
     Latest stable release: <a href="/api/2/OpenLayers.js">Link to the hosted version</a> | <a href="/download/OpenLayers-2.0.tar.gz">OpenLayers-2.0.tar.gz</a> | <a href="/doc/reference.html">Class Documentation</a> |  <a href="/gallery/">See Screenshots</a> 
     </p>
-    <p><b>Latest Development Release</b>: Test out OpenLayers 2.1-RC2! <a href="/api/2.1-rc2/OpenLayers.js">Link to 2.1-RC2 Hosted Version</a>.</p>   
+    <p><b>Latest Development Release</b>: Test out OpenLayers 2.1-RC3! <a href="/api/2.1-rc4/OpenLayers.js">Link to 2.1-RC4 Hosted Version</a>.</p>   
    <p><b>FOSS4G</b>: Was the FOSS4G presentation too early for you this morning? The presentation is <a href="http://openlayers.org/presentations/foss4g2006/openlayers.odp">available in Open Office Impress format</a>, and the examples are <a href="http://openlayers.org/presentations/foss4g2006/examples/">available as well</a>.</p>  
     <h3>About...</h3>
     <p>OpenLayers makes it easy to put a dynamic map in any web page.  It can
@@ -88,7 +88,7 @@ href="//trac.openlayers.org">wiki</a> for the very latest updates and
 documentation, and thank you for taking an interest.</p> 
 
   </div>
-  <script type="text/javascript" src="/api/2.1-rc2/OpenLayers.js"></script>
+  <script type="text/javascript" src="/api/2.1-rc4/OpenLayers.js"></script>
   <script type="text/javascript">
         <!--
             var map = new OpenLayers.Map('map');
