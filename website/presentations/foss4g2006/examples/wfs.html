@@ -9,8 +9,8 @@
     var map = new OpenLayers.Map('map');
     var wms = new OpenLayers.Layer.WMS( "OpenLayers WMS", 
         "http://labs.metacarta.com/wms/vmap0", {layers: 'basic'} );
-    OpenLayers.ProxyHost="/cgi-bin/proxy.cgi?url=";
-    var layer = new OpenLayers.Layer.WFS( "Owl Survey",
+    OpenLayers.ProxyHost="/proxy/?url=";
+    var wfs = new OpenLayers.Layer.WFS( "Owl Survey",
                "http://www.bsc-eoc.org/cgi-bin/bsc_ows.asp?",
                {typename: "OWLS", maxfeatures: 30});
     map.addLayers([wms,wfs]);

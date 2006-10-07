@@ -9,7 +9,7 @@
     var map = new OpenLayers.Map('map');
     var wms = new OpenLayers.Layer.WMS( "OpenLayers WMS", 
         "http://labs.metacarta.com/wms/vmap0", {layers: 'basic'} );
-    OpenLayers.ProxyHost="/cgi-bin/proxy.cgi?url=";
+    OpenLayers.ProxyHost="/proxy/?url=";
     var georss = new OpenLayers.Layer.GeoRSS( "GeoRSS",
        "http://earthquake.usgs.gov/recenteqsww/eqs7day-M2.5.xml" );
     map.addLayers([wms,georss]);
