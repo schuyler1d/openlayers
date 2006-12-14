@@ -11,9 +11,9 @@
     </div>
     <h3>Get OpenLayers Now</h3>
     <p>
-    Latest stable release: <a href="/api/2/OpenLayers.js">Link to the hosted version</a> | <a href="/download/OpenLayers-2.1.tar.gz">OpenLayers-2.1.tar.gz</a> | <a href="/doc/reference.html">Class Documentation</a> |  <a href="/gallery/">See Screenshots</a> 
+    Latest stable release: <a href="/api/OpenLayers.js">Link to the hosted version</a> | <a href="/download/OpenLayers-2.2.tar.gz">OpenLayers-2.2.tar.gz</a> | <a href="http://trac.openlayers.org/wiki/Release/2.2/Notes">2.2 Release Notes</a> | <a href="/doc/reference.html">Class Documentation</a> |  <a href="/gallery/">See Screenshots</a> 
     </p>
-   <p><b>FOSS4G</b>: Was the FOSS4G presentation too early for you this morning? The presentation is <a href="http://openlayers.org/presentations/foss4g2006/openlayers.odp">available in Open Office Impress format</a>, and the examples are <a href="http://openlayers.org/presentations/foss4g2006/examples/">available as well</a>.</p>  
+<!--   <p><b>FOSS4G</b>: Was the FOSS4G presentation too early for you this morning? The presentation is <a href="http://openlayers.org/presentations/foss4g2006/openlayers.odp">available in Open Office Impress format</a>, and the examples are <a href="http://openlayers.org/presentations/foss4g2006/examples/">available as well</a>.</p> --> 
     <h3>About...</h3>
     <p>OpenLayers makes it easy to put a dynamic map in any web page.  It can
 display map tiles and markers loaded from any source.    <a
@@ -32,7 +32,7 @@ completely free, Open Source JavaScript, released under the BSD License.</p>
         frameborder="0"&gt;
       &lt;/iframe&gt;</pre>
 
-<p>Read more examples in the <a href="QuickTutorial">20-second tutorial</a>.  The visual appearance of the MapViewer is not yet stable.  If you like it, please join the <a href="EmailLists">users' email list</a> and tell us about your use.</p>
+<p>Read more examples in the <a href="QuickTutorial">20-second tutorial</a>.  The visual appearance of the MapViewer is not yet stable.  If you like it, please join the <a href="/mailman/listinfo">email list</a> and tell us about your use.</p>
 
     <h3>For Developers!</h3>
 <p>OpenLayers is a pure JavaScript library for displaying map data in most
@@ -46,8 +46,8 @@ community.</p>
 <p>Furthermore, OpenLayers implements industry-standard methods for geographic
 data access, such as the OpenGIS Consortium's Web Mapping Service (WMS) and Web
 Feature Service (WFS) protocols. Under the hood, OpenLayers is written in
-object-oriented JavaScript, using <a
-href="//prototype.conio.net/">Prototype.js</a> and components from the <a
+object-oriented JavaScript, using components from <a
+href="//prototype.conio.net/">Prototype.js</a> and the <a
 href="//openrico.org/">Rico</a> library. The OpenLayers code base already has
 hundreds of <a href="/dev/tests/run-tests.html">unit tests</a>, via the <a
 href="http://straytree.com/TestAnotherWay/doc/index.html">Test.AnotherWay</a> 
@@ -85,18 +85,16 @@ of the examples to get an idea how the OpenLayers library is used.</p>
 in the next few weeks and months. We need your support! Please check the <a
 href="//trac.openlayers.org">wiki</a> for the very latest updates and
 documentation, and thank you for taking an interest.</p> 
-
-  <script type="text/javascript" src="/api/2.1/OpenLayers.js"></script>
+  <script type="text/javascript" src="/api/OpenLayers.js"></script>
   <script type="text/javascript">
         <!--
-            var map = new OpenLayers.Map('map');
+            var map = new OpenLayers.Map('map', {'maxResolution': 1.40625/2});
 
             var ol_wms = new OpenLayers.Layer.WMS( "World Map", 
-                "http://labs.metacarta.com/wms/vmap0?",
-                 {layers: 'basic'} );
+              "http://labs.metacarta.com/wms-c/Basic.py?", {layers: 'basic', format: 'image/png' } );
 
             var jpl_wms = new OpenLayers.Layer.KaMap( "Satellite",
-                    "/world/index.php", {g: "satellite", map: "world"});
+              "http://labs.metacarta.com/wms-c/Basic.py?", {layers: 'satellite', format: 'image/png' } );
             var dm_wms = new OpenLayers.Layer.WMS( "Canada",
                 "http://www2.dmsolutions.ca/cgi-bin/mswms_gmap",
                 {layers: "bathymetry,land_fn,park,drain_fn,drainage," +
