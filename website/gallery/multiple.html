@@ -25,9 +25,7 @@
     map.addControl(layer_switcher);
     layer_switcher.maximizeControl();
 
-    var mmlayer = new OpenLayers.Layer.MultiMap( "MultiMap", {minZoomLevel: 1});
-    map.addLayer(mmlayer);
-
+    var mm = new OpenLayers.Layer.MultiMap( "MultiMap", {minZoomLevel: 1});
     var wms = new OpenLayers.Layer.WMS( "OpenLayers WMS", "http://labs.metacarta.com/wms/vmap0", {layers: 'basic'} );
     var jpl_wms = new OpenLayers.Layer.KaMap( "Satellite WMS (NASA)", "/world/index.php", {g: "satellite", map: "world"});
     var google = new OpenLayers.Layer.Google("Google");
@@ -40,7 +38,7 @@
     var markers = new OpenLayers.Layer.Markers("Markers");
     markers.setVisibility(false);
 
-    map.addLayers([wms, jpl_wms, google, googles, googleh, ve, yahoo, markers, georss]);
+    map.addLayers([wms, jpl_wms, google, googles, googleh, ve, yahoo, markers, georss, mm]);
 
     map.setCenter(new OpenLayers.LonLat(-71,42), 6);
 
